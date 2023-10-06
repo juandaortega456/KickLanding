@@ -1,0 +1,112 @@
+body{
+    background-color: #101010;
+}
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.logo input[type=text]{
+    border: inset;
+    margin: 0px 0px 0px 50px;
+}
+
+.logo ul{
+    display: inline-block;
+    list-style: none;
+  /* margin-right: 14px; */
+     margin-top: -2px;
+    text-align: right;
+    transition: transform 0.5s ease-out;
+    width: 100%;
+    display: flex;
+    transition: transform 0.5s ease-out; 
+    justify-content: space-between;
+}
+
+.logo li{
+    display: inline-block;
+}
+
+.logo li a{
+    color: rgb(251, 253, 255);
+    font-size: 0.7em;
+    height: 50px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.login{
+    letter-spacing: 1px;
+    margin: 0 0 0 0;
+    padding: 0 4px;
+}
+
+.video{
+    background-image:url("./Images/kick1.png");
+    background-color: #cccccc;
+    height: 920px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playImg{
+    display: flex;
+    width: 250px;
+    height: 250px;
+    justify-content: center;
+}
+
+.cronometro{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.cronometro .bloque{
+ margin: 0px 4px;
+ display: flex;
+ flex-direction: column;
+ align-items: center;   
+}
+
+.cronometro .bloque div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: dimgray;
+    box-shadow: 0px 0px 6px 2px #727272 inset;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    width: 100px;
+    height: 70px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.cronometro .bloque p{
+    font-size: 11px;
+    font-weight: bold;
+    color: #dedede;
+
+}
+
+.cronometro h1{
+    text-align: center;
+    font-size: 35px;
+    color: #53fc18;
+
+}
+
+.gris{
+    background-color: #3a3430;
+    height: auto;
+}
+
+.beneficios{
+    color: #ffffff;
+}
