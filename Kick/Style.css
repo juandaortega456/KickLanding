@@ -1,112 +1,289 @@
-body{
-    background-color: #101010;
+:root {
+    --background-color: #101010;
+    --main-color: #53fc18;
+    --main-color-hover: #3a3430;
+    --input-color: #cccccc;
+    --white-color: #ffffff;
+    --black-color: #000000;
 }
 
-.logo{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+* {
+    margin: 0;
+    padding: 0;
 }
 
-.logo input[type=text]{
-    border: inset;
-    margin: 0px 0px 0px 50px;
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
 }
 
-.logo ul{
-    display: inline-block;
+html {
+    box-sizing: border-box;
+
+    /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--background-color);
+    font-family: "Roboto", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: 5.0rem;
+}
+
+h2 {
+    font-size: 4.0rem;
+}
+
+ul {
     list-style: none;
-  /* margin-right: 14px; */
-     margin-top: -2px;
-    text-align: right;
-    transition: transform 0.5s ease-out;
+}
+
+nav {
+    height: 10.0rem;
     width: 100%;
     display: flex;
-    transition: transform 0.5s ease-out; 
-    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.0rem;
 }
 
-.logo li{
-    display: inline-block;
-}
-
-.logo li a{
-    color: rgb(251, 253, 255);
-    font-size: 0.7em;
-    height: 50px;
+a {
     text-decoration: none;
-    text-transform: uppercase;
+    color: var(--white-color);
 }
 
-.login{
-    letter-spacing: 1px;
-    margin: 0 0 0 0;
-    padding: 0 4px;
+nav a {
+    font-size: 2.0rem;
 }
 
-.video{
-    background-image:url("./Images/kick1.png");
+.search {
+    display: flex;
+    align-items: center;
+    width: 30.0rem;
+    height: 3.0rem;
     background-color: #cccccc;
-    height: 920px;
-    margin: 10px;
+    margin: 0 1.0rem;
+    padding: 0 1.0rem;
+    border-radius: 0.5rem;
+}
+
+.search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 95%;
+}
+
+#explorar-nav {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    justify-content: space-between;
+    width: 22.0rem;
+}
+
+.register {
+    background-color: var(--main-color);
+    padding: 1.0rem 2.0rem;
+    border-radius: 3.0rem;
+    color: var(--black-color);
+}
+
+.register:hover {
+    color: var(--main-color);
+    background-color: var(--main-color-hover);
+    transition: 0.2s ease-in-out;
+}
+
+.video {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-image: url("./Images/kick1.png");
+    background-color: #cccccc;
+    width: 100%;
+    height: 100vh;
+    padding: 0.1rem;
 }
-.playImg{
+
+.playImg {
     display: flex;
-    width: 250px;
-    height: 250px;
+    width: 25.0rem;
+    height: 25.0rem;
     justify-content: center;
 }
 
-.cronometro{
+.cronometro {
     display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.cronometro .bloque{
- margin: 0px 4px;
- display: flex;
- flex-direction: column;
- align-items: center;   
-}
-
-.cronometro .bloque div{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: dimgray;
-    box-shadow: 0px 0px 6px 2px #727272 inset;
-    color: #ffffff;
-    font-size: 40px;
-    font-weight: bold;
-    width: 100px;
-    height: 70px;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    width: 100%;
+    padding: 1.0rem 1.0rem;
 }
 
-.cronometro .bloque p{
-    font-size: 11px;
-    font-weight: bold;
-    color: #dedede;
-
-}
-
-.cronometro h1{
+.cronometro h1 {
     text-align: center;
-    font-size: 35px;
-    color: #53fc18;
-
+    color: var(--main-color);
+    font-weight: bold;
 }
 
-.gris{
+.cronometro p {
+    width: 30rem;
+    text-align: center;
+    color: var(--main-color);
+    font-size: 3.0rem;
+    font-weight: bold;
+}
+
+.contador h1 {
+    color: var(--white-color);
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #3a3430;
     height: auto;
+    padding: 1rem 20rem;
+    margin: 0 1rem;
 }
 
-.beneficios{
-    color: #ffffff;
+.beneficios {
+    color: var(--white-color);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem 15rem;
 }
+
+.beneficios-title {
+    text-align: center;
+    color: var(--white-color);
+}
+
+
+.beneficios-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-card {
+    color: var(--main-color);
+    font-weight: bold;
+    text-align: center;
+}
+
+.beneficios-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-beneficios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60rem;
+    background-color: var(--black-color);
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+}
+
+.beneficios-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.img-card {
+    width: 6rem;
+    height: 9rem;
+}
+
+.text-card {
+    text-align: center;
+}
+
+.streamers {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding: 3rem 0;
+}
+
+.streamers > img {
+    width: 190rem;
+    height: 100vh;
+}
+
+.gallery {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.gallery img {
+    width: 50rem;
+    height: 30rem;
+}
+
+.btn-join {
+    background-color: var(--main-color);
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    color: var(--background-color);
+    font-size: 4rem;
+    font-weight: bold;
+    width: 30rem;
+    height: 7rem;
+    margin: 2rem 0 0 0;
+}
+
+.btn-join:hover {
+    color:var(--main-color);
+    background-color: var(var(--main-color-hover));
+    transition: 0.2s ease-in-out;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 1rem;
+}
+
+.social-icon {
+    color: var(--white-color);
+    font-size: 8rem;
+    margin: 0 1rem;
+}
+
+.os-icon {
+    width: 20rem;
+    height: 8rem;
+}
+
+

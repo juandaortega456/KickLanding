@@ -1,72 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"   />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/640fca4751.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="./Images/Kick_pestaña.png" />
     <title>Kick</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <a href="#home"><img width="100px" height="auto" src="./Images/Kick_logo.png"></a>
-                <input type="text" placeholder="Search...">
-                <ul class="menu">
-                    <li><a href="https://kick.com/categories">Explorar</a></li>
-                    <li><a class="login" href="https://kick.com/">Log In</a></li>
-                </ul>
-            </div>
-            
+            <a href="#home"><img width="100px" height="auto" src="./Images/Kick_logo.png"></a>
+            <form action="https://kick.com/search">
+                <div class="search">
+                    <input type="search" placeholder="search...">
+                    <i class="fas fa-search"></i>
+                </div>
+            </form>
+            <a id="explorar-nav" href="https://kick.com/categories">Explorar</a>
+            <ul class="menu">
+                <li><a class="login" href="https://kick.com/">Log In</a></li>
+                <li> <a href="#" class="register">Registrarse</a></li>
+            </ul>
         </nav>
     </header>
-    <div class="video">
-        <img class="playImg" src="./Images/Vector.png" >
-    </div>
-    <div class="cronometro">
-        <h1>OFERTA</h1>
-        <div class="bloque">
-            <div class="dias" id="dias">00</div>
-                <p>DÍAS</p>                
-        </div>
-        <div class="bloque">
-            <div class="horas" id="horas">--</div>
-                <p>HORAS</p>        
-        </div>
-        <div class="bloque">
-            <div class="minutos" id="minutos">--</div>
-                <p>MINUTOS</p>       
-        </div>
-        <div class="bloque">
-            <div class="segundos" id="segundos">--</div>
-                <p>SEGUNDOS</p>       
-        </div>
-    </div>
-    <script src="./app.js"></script>
-    <div class="gris">
-        <div class="beneficios">
-            <div>
-                <img src="./Images/KICK.png">
-                <p>Somos una nueva plataforma que viene a quedarse con el mundo del streaming. 
-                    comodidad, facilidad, y buen ambiente son caracteristicas que identifican nuestra plataforma KICK.</p>
+    <main>
+        <section class="video">
+            <img class="playImg" src="./Images/Vector.png">
+        </section>
+        <section class="cronometro">
+            <h1>OFERTA</h1>
+            <div class="contador">
+                <h1>
+                    <span id="dias"></span>
+                    <span>:</span>
+                    <span id="horas"></span>
+                    <span>:</span>
+                    <span id="minutos"></span>
+                    <span>:</span>
+                    <span id="segundos"></span>
+                    <h1>
             </div>
-            <div>
-                <img src="./Images/MONEY.png">
-                <p>Manejamos las mejores tarifas tanto para nuestros usuarios como nuestros Streamers,
-                     compitiendo con contratos muy favorables para ustedes acomparación de otras plataformas.</p>
+            <p> conoce los beneficios de ser streamer</p>
+        </section>
+        <script src="./app.js"></script>
+        <section class="info">
+            <div class="beneficios">
+                <div class="beneficios-card">
+                    <img class="img-card" src="./Images/KICK.png" alt="kick">
+                    <p class="text-card">Somos una nueva plataforma que viene a quedarse con el mundo del streaming.
+                        comodidad, facilidad, y buen ambiente son caracteristicas que identifican nuestra plataforma
+                        KICK.
+                    </p>
+                </div>
+                <div class="beneficios-card">
+                    <img class="img-card" src="./Images/MONEY.png" alt="money">
+                    <p class="text-card">Manejamos las mejores tarifas tanto para nuestros usuarios como nuestros
+                        Streamers,
+                        compitiendo con contratos muy favorables para ustedes acomparación de otras plataformas.</p>
+                </div>
+                <div class="beneficios-card">
+                    <img class="img-card" src="./Images/CONTROL.png" alt="control">
+                    <p class="text-card">Sientete en la comodidad de jugar y stremear lo que más te gusta dentro de
+                        nuestra
+                        plataforma, pues queremos generar un buen ambiente para nuestros streamers.</p>
+                </div>
+
+                <div class="beneficios-card">
+                    <img class="img-card" src="./Images/Perfil.png" alt="Perfil">
+                    <p class="text-card">Ingreso fijo sin importar tus seguidores</p>
+                </div>
+                <div class="beneficios-main">
+                    <div class="info-beneficios">
+                        <h1 class="beneficios-title">
+                            Conoce algunos de los beneficios de ser Streamer en nuestra plataforma
+                        </h1>
+                    </div>
+                    <div classs="beneficios-card">
+                        <h1 class="title-card">95%</h1>
+                        <p class="text-card">de los ingresos son TUYOS</p>
+                    </div>
+                </div>
+                <div class="beneficios-card">
+                    <img class="img-card" src="./Images/Money02.png" alt="Money2">
+                    <p class="text-card">Gana por publicidad</p>
+                </div>
             </div>
-            <div>
-                <img src="./Images/CONTROL.png">
-                <p>Sientete en la comodidad de jugar stremear lo que más te gusta dentro de nuestra plataforma,
-                     pues queremos generar un buen ambiente para nuestros streamers.</p>
+            <div class="streamers">
+                <img src="./images/Streamers.png" alt="streamers">
+                <div class="gallery">
+                    <a href="https://www.youtube.com/watch?v=2oAaVWf-yAI&ab_channel=Elure">
+                        <img src="./images/Elure.jpg" alt="elure">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=MB4AtvVTzps&ab_channel=PookyBooCh">
+                        <img src="./images/PookyBooVt.jpg" alt="PookyBooVt">
+                    </a>
+                    <a href="https://www.youtube.com/watch?v=r3Kimkuu8f8&ab_channel=Shylily">
+                        <img src="./images/Shylily.jpg" alt="shylili">
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="streamers">
-            <img width="1550px" height="500px" src="./Images/Streamers.png" >
-        </div>
-    </div>
+            <button class="btn-join">Join us</button>
+            <div class="social">
+                <div>
+                    <a href="https://twitter.com/kickstreaming">
+                        <i class="fa-brands fa-twitter social-icon"></i>
+                    </a>
+                    <a href="https://discord.com/invite/kick">
+                        <i class="fa-brands fa-discord social-icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/kickstreaming">
+                        <i class="fa-brands fa-instagram social-icon"></i>
+                    </a>
+                </div>
+                <div>
+                    <img src="./images/GooglePlay.png" alt="googleplay" class="os-icon">
+                    <img src="./Images/Iosappstore.png" alt="appstore" class="os-icon">
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
+
 </html>
-
-
